@@ -7,6 +7,7 @@ import Gallery from 'components/gallery';
 import IOExample from 'components/io-example';
 import Modal from 'containers/modal';
 import { graphql } from 'gatsby';
+import GoogleButton from 'react-google-button';
 
 const Index = ({ data }) => (
   <Layout>
@@ -15,12 +16,17 @@ const Index = ({ data }) => (
         {data.homeJson.content.childMarkdownRemark.rawMarkdownBody}
       </Title>
       <Modal>
-        <video
+        {/* <video
           src="https://i.imgur.com/gzFqNSW.mp4"
           playsInline
           loop
           autoPlay
           muted
+        /> */}
+        <GoogleButton
+          onClick={() => {
+            console.log('Google button clicked');
+          }}
         />
       </Modal>
     </Box>
