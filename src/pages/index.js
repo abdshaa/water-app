@@ -34,7 +34,7 @@ const Index = ({ data }) => (
  <GoogleLogout
       clientId="539150265253-mhuq4ueo94s5kvbt9bjf1d64gdq0c6m7.apps.googleusercontent.com"
       render={renderProps => (
-        <button onClick={renderProps.onClick} disabled={renderProps.disabled}>Log out</button>
+        <button onClick={renderProps.onClick}>Log out</button>
       )}
       
       buttonText="Logout"
