@@ -2,18 +2,18 @@
   "title": "Home",
   "content": "intro.md",
   "gallery": [{
-    "title": "Log everytime you drink!",
-    "copy": "For global styles.",
+    "title": "Do it for you!",
+    "copy": "Get started and aim to stay hydrated.",
     "image": "../images/gallery/react-context.jpg"
   },
   {
-    "title": "Interactive animations!",
-    "copy": "Component-based for easy usage.",
+    "title": "Get Started!",
+    "copy": "Track your daily progress by logging your water intake.",
     "image": "../images/gallery/page-transitions.jpg"
   },
   {
-    "title": "Set a goal!",
-    "copy": "Including a polyfill for Safari.",
+    "title": "Track Overall Progress!",
+    "copy": "Reflect on your progress .",
     "image": "../images/gallery/intersection-observer.jpg"
   }]
 }

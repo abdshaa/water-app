@@ -8,9 +8,11 @@ import IOExample from 'components/io-example';
 import Modal from 'containers/modal';
 import { graphql } from 'gatsby';
 import GoogleButton from 'react-google-button';
+import Animation from 'components/Animation';
 
 const Index = ({ data }) => (
   <Layout>
+    <Animation />
     <Box>
       <Title as="h2" size="large">
         {data.homeJson.content.childMarkdownRemark.rawMarkdownBody}
