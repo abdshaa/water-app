@@ -1,1 +1,2 @@
-Keep track of your water intake! An easy way to make sure you drink your water and stay hydrated.
+Here to hydrate the world!
+

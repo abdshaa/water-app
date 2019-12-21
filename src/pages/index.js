@@ -12,6 +12,7 @@ import  GoogleLogout  from 'react-google-login';
 
 const Index = ({ data }) => (
   <Layout>
+    <Animation />
     <Box>
       <Title as="h2" size="large">
         {data.homeJson.content.childMarkdownRemark.rawMarkdownBody}
