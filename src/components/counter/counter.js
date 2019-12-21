@@ -2,30 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Container } from './counter.css';
 
-
 const counterStyle = {
   /* styles skipped for brevity */
-}
+};
 
 class Counter extends React.Component {
   static defaultProps = {
     initialvalue: 0,
-    
-  }
+  };
 
   state = {
     value: Number(this.props.initialvalue),
-    
-  }
+  };
 
   handleIncrement = () => {
     this.setState(state => {
       return {
-        value: (state.value + 1),
-       
-      }
-    })
-  }
+        value: state.value + 1,
+      };
+    });
+  };
 
   // handleDecrement = () => {
   //   this.setState(state => {
@@ -35,7 +31,6 @@ class Counter extends React.Component {
   //   })
   // }
 
-  
   render() {
     return (
       <span style={counterStyle}>
@@ -44,7 +39,7 @@ class Counter extends React.Component {
         <button onClick={this.handleIncrement}>I drank 17oz</button>
         <button disabled={!this.state.value}>You drank enough</button>
       </span>
-    )
+    );
   }
 }
 
