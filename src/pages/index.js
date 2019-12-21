@@ -4,11 +4,13 @@ import Layout from 'components/layout';
 import Box from 'components/box';
 import Title from 'components/title';
 import Gallery from 'components/gallery';
+import Counter from 'components/counter';
 import IOExample from 'components/io-example';
-import Modal from 'containers/modal';
 import { graphql } from 'gatsby';
-import GoogleButton from 'react-google-button';
-import Animation from 'components/Animation';
+
+import GoogleButton from 'react-google-button'
+import GoogleLogin from 'react-google-login';
+import  GoogleLogout  from 'react-google-login';
 
 const Index = ({ data }) => (
   <Layout>
@@ -17,23 +19,34 @@ const Index = ({ data }) => (
       <Title as="h2" size="large">
         {data.homeJson.content.childMarkdownRemark.rawMarkdownBody}
       </Title>
-      <Modal>
-        {/* <video
-          src="https://i.imgur.com/gzFqNSW.mp4"
-          playsInline
-          loop
-          autoPlay
-          muted
-        /> */}
-        <GoogleButton
-          onClick={() => {
-            console.log('Google button clicked');
-          }}
-        />
-      </Modal>
+      
     </Box>
+     
+         
+       
+           <GoogleLogin
+    clientId="539150265253-mhuq4ueo94s5kvbt9bjf1d64gdq0c6m7.apps.googleusercontent.com"
+    render={renderProps => (
+      <button onClick={renderProps.onClick} disabled={renderProps.disabled}>Log in</button>
+    )}
+    buttonText="Login"
+    cookiePolicy={'single_host_origin'}
+  />
+ 
+ <GoogleLogout
+      clientId="539150265253-mhuq4ueo94s5kvbt9bjf1d64gdq0c6m7.apps.googleusercontent.com"
+      render={renderProps => (
+        <button onClick={renderProps.onClick}>Log out</button>
+      )}
+      
+      buttonText="Logout"
+      
+    >
+    </GoogleLogout>
+    
     <Gallery items={data.homeJson.gallery} />
     <div style={{ height: '50vh' }} />
+    <Counter />
     <IOExample />
   </Layout>
 );
