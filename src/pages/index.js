@@ -7,7 +7,6 @@ import Gallery from 'components/gallery';
 import Counter from 'components/counter';
 import IOExample from 'components/io-example';
 import { graphql } from 'gatsby';
-import GoogleButton from 'react-google-button'
 import GoogleLogin from 'react-google-login';
 import  GoogleLogout  from 'react-google-login';
 
@@ -20,8 +19,6 @@ const Index = ({ data }) => (
       
     </Box>
      
-         
-       
            <GoogleLogin
     clientId="539150265253-mhuq4ueo94s5kvbt9bjf1d64gdq0c6m7.apps.googleusercontent.com"
     render={renderProps => (

@@ -22,7 +22,7 @@ class Counter extends React.Component {
     this.setState(state => {
       return {
         value: (state.value + 1),
-       
+     
       }
     })
   }
@@ -41,11 +41,15 @@ class Counter extends React.Component {
       <span style={counterStyle}>
         <strong style={{ flex: `1` }}>{this.state.value}</strong>
         {/* <button onClick={this.handleDecrement}>Decrement</button> */}
-        <button onClick={this.handleIncrement}>I drank 17oz</button>
-        <button disabled={!this.state.value}>You drank enough</button>
+        <button id="Clicks" onClick={this.handleIncrement}>I drank 17oz</button>
+        {/* <button disabled={!this.state.value}>You drank enough</button> */}
       </span>
+      
     )
   }
 }
 
+
+
 export default Counter;
+
